@@ -2,6 +2,12 @@ require "eb-patches/version"
 require "eb-patches/float"
 
 module Eb
+  ###
+  #  Usage:
+  #    Eb.monkey_patch Float, "approx"
+  #    -or-
+  #    Eb.monkey_patch Float, :approx
+  ###
   def Eb.monkey_patch(patch_target, method_name)
     camelized_method_name = method_name.gsub(/_/,' ').split.map(&:capitalize).join
     patch_module = "Eb::Patches::#{patch_target}::#{camelized_method_name}"

@@ -23,11 +23,11 @@ which patches you want to be included.
 
 Patches can be applied by using the following pattern:
 
-   monkey_patch <class>, "<method>"
+   Eb.monkey_patch <class>, "<method>"
 
 e.g.
 
-   monkey_patch Float, "approx"
+   Eb.monkey_patch Float, "approx"
 
 The patches are as follows:
 
