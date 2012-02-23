@@ -1,5 +1,6 @@
 require "eb-patches/version"
 require "eb-patches/float"
+require "eb-patches/string"
 require "active_support/core_ext/string/inflections"
 
 module Eb
@@ -15,16 +16,7 @@ module Eb
     patch_target.send :include, patch_module.constantize
   end
 
-    ### this stolen from active support
-    names = patch_module.split('::')
-    names.shift if names.empty? || names.first.empty?
-
-    constant = Object
-    names.each do |name|
-      constant = constant.const_defined?(name) ? constant.const_get(name) : constant.const_missing(name)
-    end
-    ### end the stealing
-    puts "#{patch_target} including #{constant}"
-    patch_target.send :include, constant
+  def Eb.down_under(string)
+    string.strip.gsub(/\s/, "_").gsub(/\W/, "").underscore.downcase
   end
 end
