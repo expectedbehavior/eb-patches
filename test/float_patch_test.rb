@@ -1,6 +1,4 @@
-require "minitest/autorun"
-require "minitest/pride"
-require "eb-patches"
+require "test_helper"
 
 class FloatPatchTest < MiniTest::Unit::TestCase
   ###
