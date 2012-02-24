@@ -7,7 +7,7 @@ class FloatPatchTest < MiniTest::Unit::TestCase
   #  include. Integration tests! Fick jah!
   ###
   def test_the_float_patch
-    assert !1.0.respond_to?(:approx), "unpatched Float is responding to approx method"
+    assert !1.0.respond_to?(:approx)
     assert_raises(NoMethodError) { 1.0.approx(0) }
 
 
