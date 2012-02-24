@@ -2,7 +2,7 @@ require "test_helper"
 
 class FloatPatchTest < MiniTest::Unit::TestCase
   ###
-  #  This is all one big test because you can't uninclude modules in
+  #  These are all big tests because you can't uninclude modules in
   #  ruby, even though you can undefine the methods they
   #  include. Integration tests! Fick jah!
   ###
