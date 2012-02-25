@@ -49,7 +49,7 @@ filename on basically any OS made since Windows 2000
     * `before?` - is this time before another time?
     * `after?` - is this time after another time?
 
-4. Net::SMTP
+4. Net::SMTP <span style='color:red'>(pending)</span>
     * `force_tls` - force TLS to be used, even for smtp services that don't
 advertise it. *Note*: this will also cause the initializer to be aliased so TLS
 can be enabled.
