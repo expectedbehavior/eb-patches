@@ -58,7 +58,7 @@ TLS should be used. This will have no effect if force_tls hasn't been included
 already since it doesn't have any meaning otherwise
 
 1. Object
-	* `in?` - this is intended to be used in situations where you might use `.include?` -- and is in fact just calling it under the covers
+	* `in?` - this is intended to be used in situations where you might use `.include?` -- and is in fact just calling it under the covers. If you are using this with Rails 3.1+, you don't need this patch.
 
 ## Contributing
 

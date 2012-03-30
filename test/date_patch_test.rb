@@ -16,7 +16,6 @@ class DatePatchTest < MiniTest::Unit::TestCase
 
     assert today.before?(1.day.from_now)
     assert today.before?(Date.tomorrow)
-
     assert !today.before?(today)
     assert !today.before?(Date.yesterday)
     assert !today.before?(1.day.ago)
